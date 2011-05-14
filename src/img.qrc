@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file alias="lock">img/login.png</file>
+        <file alias="gaia">img/gaia.png</file>
+    </qresource>
+</RCC>
