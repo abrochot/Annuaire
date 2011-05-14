@@ -26,7 +26,7 @@ public slots:
     void showAPropos();
     void deconnexion();
     void connexion();
-
+    void nouvelUtilisateur();
 
 
 

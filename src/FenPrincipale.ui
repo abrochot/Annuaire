@@ -11,15 +11,43 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>FenPrincipale</string>
+   <string>Annuaire</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/img/gaia</normaloff>:/img/gaia</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Rechercher :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+     </layout>
+    </item>
     <item row="1" column="0">
      <widget class="QTableView" name="tableEtudiants"/>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLineEdit" name="lineEdit"/>
     </item>
    </layout>
   </widget>
@@ -36,6 +64,7 @@
     <property name="title">
      <string>Fichier</string>
     </property>
+    <addaction name="actionNouvel_utilisateur"/>
     <addaction name="actionConnexion"/>
     <addaction name="actionD_connexion"/>
     <addaction name="separator"/>
@@ -94,8 +123,15 @@
     <string>Connexion</string>
    </property>
   </action>
+  <action name="actionNouvel_utilisateur">
+   <property name="text">
+    <string>Nouvel utilisateur</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections/>
 </ui>

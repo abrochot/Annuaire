@@ -13,15 +13,18 @@ TEMPLATE = app
 SOURCES += main.cpp\
         FenPrincipale.cpp \
     LoginDialog.cpp \
-    aPropos.cpp
+    aPropos.cpp \
+    registerDialog.cpp
 
 HEADERS  += FenPrincipale.h \
     LoginDialog.h \
-    aPropos.h
+    aPropos.h \
+    registerDialog.h
 
 FORMS    += FenPrincipale.ui \
     LoginDialog.ui \
-    aPropos.ui
+    aPropos.ui \
+    registerDialog.ui
 
 RESOURCES += \
     img.qrc

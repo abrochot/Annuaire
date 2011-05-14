@@ -1,6 +1,7 @@
 #include "FenPrincipale.h"
 #include "ui_FenPrincipale.h"
-#include <LoginDialog.h>
+#include "LoginDialog.h"
+#include "registerDialog.h"
 #include <QCryptographicHash>
 #include <QMessageBox>
 
@@ -14,22 +15,10 @@ FenPrincipale::FenPrincipale(QWidget *parent) :
     connect(ui->actionQuitter,SIGNAL(triggered()),this,SLOT(close()));
     connect(ui->actionD_connexion,SIGNAL(triggered()),this, SLOT(deconnexion()));
     connect(ui->actionConnexion,SIGNAL(triggered()),this, SLOT(connexion()));
+    connect(ui->actionNouvel_utilisateur,SIGNAL(triggered()),this,SLOT(nouvelUtilisateur()));
 
-    //QString encodedPass = QString(QCryptographicHash::hash(("myPassword"),QCryptographicHash::Md5));
 
     db = new QSqlDatabase(QSqlDatabase::addDatabase("QMYSQL"));
-
-
-    /*query.exec("SELECT * FROM etudiants");
-    while(query.next())
-    {
-    int id = query.value(0).toInt();
-    QString nom = query.value(1).toString();
-    QMessageBox::information (0, QObject::tr("Information récupérée"), "Id : " + QString::number(id) + "\nNom : " + nom);
-    }*/
-
-
-
 
 }
 
@@ -105,10 +94,6 @@ void FenPrincipale::connexion()
     model->setQuery("SELECT * FROM etudiants");
     ui->tableEtudiants->setModel(model);
 
-
-
-
-
     ui->actionD_connexion->setVisible(true);
     ui->actionConnexion->setVisible(false);
 
@@ -117,6 +102,16 @@ void FenPrincipale::connexion()
 void FenPrincipale::deconnexion()
 {
     db->close();
+    model->clear();
     ui->actionD_connexion->setVisible(false);
     ui->actionConnexion->setVisible(true);
+}
+
+void FenPrincipale::nouvelUtilisateur()
+{
+    registerDialog dialog(this);
+
+    dialog.exec();
+
+
 }
