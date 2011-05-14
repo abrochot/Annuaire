@@ -2,7 +2,7 @@
 #define REGISTERDIALOG_H
 
 #include <QDialog>
-
+#include <QLineEdit>
 namespace Ui {
     class registerDialog;
 }
@@ -20,7 +20,7 @@ typedef struct {
 
     QString cursus;
     QString anneeDiplomeINSA;
-    QString annesDiplomeARCHI;
+    QString anneeDiplomeARCHI;
     QString type;
     QString EcoleArchi;
 
@@ -35,10 +35,16 @@ class registerDialog : public QDialog
 
 public:
     explicit registerDialog(QWidget *parent = 0);
+    registerDialog(QStringList listeEcole, QStringList listeEntreprises, QWidget *parent = 0);
     ~registerDialog();
     infoUser getUserInfo();
+
+public slots:
+    void OkClicked();
+
 private:
     Ui::registerDialog *ui;
+    QList<QLineEdit *> champsRequis;
 };
 
 #endif // REGISTERDIALOG_H

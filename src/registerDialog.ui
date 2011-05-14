@@ -29,6 +29,10 @@
    <iconset resource="img.qrc">
     <normaloff>:/img/icon</normaloff>:/img/icon</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+</string>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
@@ -328,14 +332,25 @@ p, li { white-space: pre-wrap; }
      <item row="14" column="1">
       <widget class="QLineEdit" name="leType"/>
      </item>
-     <item row="15" column="1">
-      <widget class="QLineEdit" name="leEcoleArchi"/>
-     </item>
-     <item row="17" column="1">
-      <widget class="QLineEdit" name="leEntreprise"/>
-     </item>
      <item row="18" column="1">
       <widget class="QLineEdit" name="lePays"/>
+     </item>
+     <item row="15" column="1">
+      <widget class="QComboBox" name="cbEcole">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>-1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="1">
+      <widget class="QComboBox" name="cbEntreprise">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -364,8 +379,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>leAnneeDiplomeINSA</tabstop>
   <tabstop>leAnneeDiplomeARCHI</tabstop>
   <tabstop>leType</tabstop>
-  <tabstop>leEcoleArchi</tabstop>
-  <tabstop>leEntreprise</tabstop>
   <tabstop>lePays</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
@@ -373,22 +386,6 @@ p, li { white-space: pre-wrap; }
   <include location="img.qrc"/>
  </resources>
  <connections>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>registerDialog</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>

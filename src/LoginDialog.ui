@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>230</width>
-    <height>188</height>
+    <width>235</width>
+    <height>177</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,6 +19,16 @@
   <property name="windowIcon">
    <iconset resource="img.qrc">
     <normaloff>:/img/icon</normaloff>:/img/icon</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"> QDialog{
+border-style: solid;
+border-color:black;
+border-width: 2px;
+border-radius: 10px;
+background-color:white
+
+}</string>
   </property>
   <property name="modal">
    <bool>true</bool>

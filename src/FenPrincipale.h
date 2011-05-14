@@ -20,7 +20,8 @@ class FenPrincipale : public QMainWindow
 public:
     explicit FenPrincipale(QWidget *parent = 0);
     ~FenPrincipale();
-
+    int registerEntreprise(QString entreprise);
+    int registerEcole(QString ecole);
 
 public slots:
     void showAPropos();
