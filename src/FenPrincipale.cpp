@@ -111,7 +111,26 @@ void FenPrincipale::nouvelUtilisateur()
 {
     registerDialog dialog(this);
 
-    dialog.exec();
+
+    bool errors = true;
+
+    while (dialog.exec()==QDialog::Accepted && errors)
+    {
+	QSqlQuery query;
+	query.prepare("SELECT * FROM etudiants WHERE login=:login");
+	query.bindValue(":login","login");
+	query.exec();
+
+	if (query.next())
+	{
+
+	    QMessageBox::critical(this,"Erreur lors de l'enregistrement","Le nom d'utilisateur est déjà pris",QMessageBox::Ok);
+	}
+	else
+	    QMessageBox::information(this,"Enregistrement réussi","Vous êtes maintenant enregistré<br> vous pouvez désormais vous connecter avec votre login/mot de passe",QMessageBox::Ok);
+
+    }
+
 
 
 }

@@ -29,6 +29,9 @@
    <iconset resource="img.qrc">
     <normaloff>:/img/icon</normaloff>:/img/icon</iconset>
   </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label_18">
@@ -63,7 +66,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="leLogin"/>
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="label_2">
@@ -73,7 +76,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="lePassword"/>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="label_14">
@@ -83,7 +86,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLineEdit" name="lineEdit_3"/>
+      <widget class="QLineEdit" name="lePassword2"/>
      </item>
      <item row="4" column="0">
       <widget class="QLabel" name="label_16">
@@ -103,18 +106,12 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="5" column="1">
-      <widget class="QLineEdit" name="lineEdit_6"/>
-     </item>
      <item row="6" column="0">
       <widget class="QLabel" name="label_4">
        <property name="text">
         <string>Prénom</string>
        </property>
       </widget>
-     </item>
-     <item row="6" column="1">
-      <widget class="QLineEdit" name="lineEdit_7"/>
      </item>
      <item row="8" column="0">
       <widget class="QLabel" name="label_5">
@@ -123,18 +120,12 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="8" column="1">
-      <widget class="QLineEdit" name="lineEdit_4"/>
-     </item>
      <item row="9" column="0">
       <widget class="QLabel" name="label_6">
        <property name="text">
         <string>mail2</string>
        </property>
       </widget>
-     </item>
-     <item row="9" column="1">
-      <widget class="QLineEdit" name="lineEdit_5"/>
      </item>
      <item row="10" column="0">
       <widget class="QLabel" name="label_19">
@@ -161,18 +152,12 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="12" column="1">
-      <widget class="QLineEdit" name="lineEdit_9"/>
-     </item>
      <item row="13" column="0">
       <widget class="QLabel" name="label_9">
        <property name="text">
         <string>Année du diplôme ARCHI</string>
        </property>
       </widget>
-     </item>
-     <item row="13" column="1">
-      <widget class="QLineEdit" name="lineEdit_10"/>
      </item>
      <item row="14" column="0">
       <widget class="QLabel" name="label_10">
@@ -181,18 +166,12 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="14" column="1">
-      <widget class="QLineEdit" name="lineEdit_11"/>
-     </item>
      <item row="15" column="0">
       <widget class="QLabel" name="label_11">
        <property name="text">
         <string>Ecole d'Architecture</string>
        </property>
       </widget>
-     </item>
-     <item row="15" column="1">
-      <widget class="QLineEdit" name="lineEdit_12"/>
      </item>
      <item row="16" column="0">
       <widget class="QLabel" name="label_17">
@@ -212,18 +191,12 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="17" column="1">
-      <widget class="QLineEdit" name="lineEdit_13"/>
-     </item>
      <item row="18" column="0">
       <widget class="QLabel" name="label_13">
        <property name="text">
         <string>Pays</string>
        </property>
       </widget>
-     </item>
-     <item row="18" column="1">
-      <widget class="QLineEdit" name="lineEdit_14"/>
      </item>
      <item row="1" column="2">
       <widget class="QLabel" name="label_20">
@@ -309,11 +282,8 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="7" column="1">
-      <widget class="QLineEdit" name="lineEdit_15"/>
-     </item>
      <item row="11" column="1">
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="cbCursus">
        <item>
         <property name="text">
          <string>Ingé/Archi</string>
@@ -325,6 +295,39 @@ p, li { white-space: pre-wrap; }
         </property>
        </item>
       </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="lePrenom"/>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="leNom"/>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="leNumTel"/>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="leMail1"/>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="leMail2"/>
+     </item>
+     <item row="12" column="1">
+      <widget class="QLineEdit" name="leAnneeDiplomeINSA"/>
+     </item>
+     <item row="13" column="1">
+      <widget class="QLineEdit" name="leAnneeDiplomeARCHI"/>
+     </item>
+     <item row="14" column="1">
+      <widget class="QLineEdit" name="leType"/>
+     </item>
+     <item row="15" column="1">
+      <widget class="QLineEdit" name="leEcoleArchi"/>
+     </item>
+     <item row="17" column="1">
+      <widget class="QLineEdit" name="leEntreprise"/>
+     </item>
+     <item row="18" column="1">
+      <widget class="QLineEdit" name="lePays"/>
      </item>
     </layout>
    </item>
@@ -340,6 +343,24 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>leLogin</tabstop>
+  <tabstop>lePassword</tabstop>
+  <tabstop>lePassword2</tabstop>
+  <tabstop>leNom</tabstop>
+  <tabstop>lePrenom</tabstop>
+  <tabstop>leNumTel</tabstop>
+  <tabstop>leMail1</tabstop>
+  <tabstop>leMail2</tabstop>
+  <tabstop>cbCursus</tabstop>
+  <tabstop>leAnneeDiplomeINSA</tabstop>
+  <tabstop>leAnneeDiplomeARCHI</tabstop>
+  <tabstop>leType</tabstop>
+  <tabstop>leEcoleArchi</tabstop>
+  <tabstop>leEntreprise</tabstop>
+  <tabstop>lePays</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
  <resources>
   <include location="img.qrc"/>
  </resources>
