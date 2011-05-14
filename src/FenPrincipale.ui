@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="img.qrc">
-    <normaloff>:/img/gaia</normaloff>:/img/gaia</iconset>
+    <normaloff>:/img/icon</normaloff>:/img/icon</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">

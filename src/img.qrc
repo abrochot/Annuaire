@@ -2,5 +2,6 @@
     <qresource prefix="/img">
         <file alias="lock">img/login.png</file>
         <file alias="gaia">img/gaia.png</file>
+        <file alias="icon">img/gaia-icon.png</file>
     </qresource>
 </RCC>
