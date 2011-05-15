@@ -14,12 +14,14 @@ SOURCES += main.cpp\
         FenPrincipale.cpp \
     LoginDialog.cpp \
     aPropos.cpp \
-    registerDialog.cpp
+    registerDialog.cpp \
+    MySqlQueryModel.cpp
 
 HEADERS  += FenPrincipale.h \
     LoginDialog.h \
     aPropos.h \
-    registerDialog.h
+    registerDialog.h \
+    MySqlQueryModel.h
 
 FORMS    += FenPrincipale.ui \
     LoginDialog.ui \

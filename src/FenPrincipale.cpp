@@ -46,7 +46,7 @@ void FenPrincipale::showAPropos()
 {
     aPropos dialog(0);
     dialog.setWindowFlags(Qt::FramelessWindowHint);
-    dialog.move(pos().x()+width()/2-dialog.width()/2,pos().y()+height()/2-dialog.height()/2);
+    dialog.move(pos().x()+(width()-dialog.width())/2,pos().y()+(height()-dialog.height())/2);
     dialog.exec();
 }
 
@@ -56,7 +56,7 @@ void FenPrincipale::connexion()
 
     LoginDialog dialog;
     dialog.setWindowFlags(Qt::FramelessWindowHint);
-    dialog.move(pos().x()+width()/2-dialog.width()/2,pos().y()+height()/2-dialog.height()/2);
+    dialog.move(pos().x()+(width()-dialog.width())/2,pos().y()+(height()-dialog.height())/2);
     if (dialog.exec()==QDialog::Accepted)
     {
 
@@ -77,16 +77,17 @@ void FenPrincipale::connexion()
 
 	if (query.next())
 	{
-	    model = new QSqlQueryModel(this);
+	    model = new MySqlQueryModel(this);
+	    connect(model,SIGNAL(newQuery()),this,SLOT(miseAJourModel()));
 
-	    model->setQuery("SELECT nom,prenom,numTel,mail1,mail2,cursus FROM etudiants");
 	    ui->tableEtudiants->setModel(model);
+	    model->setQuery("SELECT nom,prenom,numTel,mail1,mail2,cursus FROM etudiants",*db);
 
 	    ui->actionD_connexion->setVisible(true);
 	    ui->actionConnexion->setVisible(false);
 	}
 	else
-	    QMessageBox::critical(this,"connexion échouée",dialog.password(),QMessageBox::Ok);
+	    QMessageBox::critical(this,"connexion échouée","Le nom d'utilisateur ou le mot de passe est incorrect",QMessageBox::Ok);
 
     }
 }
@@ -205,6 +206,13 @@ void FenPrincipale::nouvelUtilisateur()
     }
 }
 
+void FenPrincipale::miseAJourModel()
+{
+    for (int i=0; i<model->rowCount();i++)
+	ui->tableEtudiants->setRowHeight(i, 18);
+}
+
+
 int FenPrincipale::registerEntreprise(QString entreprise)
 {
     QSqlQuery query;
@@ -246,6 +254,7 @@ int FenPrincipale::registerEcole(QString ecole)
 	query.bindValue(":nomEcole",ecole);
 	query.exec();
     }
+
 
     return query.value(0).toInt();
 

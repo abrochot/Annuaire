@@ -57,6 +57,9 @@
       <property name="selectionBehavior">
        <enum>QAbstractItemView::SelectRows</enum>
       </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
       <property name="sortingEnabled">
        <bool>true</bool>
       </property>
@@ -87,7 +90,7 @@
    </property>
    <widget class="QMenu" name="menuFichier">
     <property name="title">
-     <string>Fichier</string>
+     <string>&amp;Fichier</string>
     </property>
     <addaction name="actionNouvel_utilisateur"/>
     <addaction name="actionConnexion"/>
@@ -97,13 +100,13 @@
    </widget>
    <widget class="QMenu" name="menuEdition">
     <property name="title">
-     <string>Edition</string>
+     <string>&amp;Edition</string>
     </property>
     <addaction name="actionRechercher_Ctrl_F"/>
    </widget>
    <widget class="QMenu" name="menuAide">
     <property name="title">
-     <string>Aide</string>
+     <string>&amp;Aide</string>
     </property>
     <addaction name="actionA_Propos"/>
    </widget>
@@ -122,12 +125,12 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionQuitter">
    <property name="text">
-    <string>Quitter</string>
+    <string>&amp;Quitter</string>
    </property>
   </action>
   <action name="actionD_connexion">
    <property name="text">
-    <string>Déconnexion</string>
+    <string>&amp;Déconnexion</string>
    </property>
    <property name="visible">
     <bool>false</bool>
@@ -135,22 +138,25 @@
   </action>
   <action name="actionRechercher_Ctrl_F">
    <property name="text">
-    <string>Rechercher (Ctrl+F)</string>
+    <string>&amp;Rechercher</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
    </property>
   </action>
   <action name="actionA_Propos">
    <property name="text">
-    <string>A Propos</string>
+    <string>A &amp;Propos</string>
    </property>
   </action>
   <action name="actionConnexion">
    <property name="text">
-    <string>Connexion</string>
+    <string>&amp;Connexion</string>
    </property>
   </action>
   <action name="actionNouvel_utilisateur">
    <property name="text">
-    <string>Nouvel utilisateur</string>
+    <string>&amp;Nouvel utilisateur</string>
    </property>
   </action>
  </widget>

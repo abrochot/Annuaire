@@ -5,8 +5,9 @@
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QSqlError>
-#include <QSqlQueryModel>
-#include <aPropos.h>
+
+#include "MySqlQueryModel.h"
+#include "aPropos.h"
 
 
 namespace Ui {
@@ -28,13 +29,14 @@ public slots:
     void deconnexion();
     void connexion();
     void nouvelUtilisateur();
+    void miseAJourModel();
 
 
 
 private:
     Ui::FenPrincipale *ui;
     QSqlDatabase *db;
-    QSqlQueryModel *model;
+    MySqlQueryModel *model;
 
 };
 
