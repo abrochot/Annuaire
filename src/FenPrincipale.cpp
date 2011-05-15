@@ -19,6 +19,8 @@ FenPrincipale::FenPrincipale(QWidget *parent) :
     connect(ui->actionConnexion,SIGNAL(triggered()),this, SLOT(connexion()));
     connect(ui->actionNouvel_utilisateur,SIGNAL(triggered()),this,SLOT(nouvelUtilisateur()));
 
+    connect(ui->leRecherche,SIGNAL(textChanged(QString)),this,SLOT(recherche(QString)));
+
     db = new QSqlDatabase(QSqlDatabase::addDatabase("QMYSQL"));
 
     db->setHostName("localhost");
@@ -258,4 +260,25 @@ int FenPrincipale::registerEcole(QString ecole)
 
     return query.value(0).toInt();
 
+}
+
+void FenPrincipale::recherche(QString newText)
+{
+    for (int i=0; i<model->rowCount(); i++)
+    {
+	int refCount=0;
+	for(int j=0; j<model->columnCount();j++)
+	{
+	    qDebug()<<i << " " << j;
+	    qDebug()<<model->data(model->index(i,j)).toString();
+	    if (model->data(model->index(i,j)).toString().contains(newText,Qt::CaseInsensitive))
+	    {
+		refCount++;
+		ui->tableEtudiants->showRow(i);
+		break;
+	    }
+	}
+	if (refCount==0)
+	    ui->tableEtudiants->hideRow(i);
+    }
 }

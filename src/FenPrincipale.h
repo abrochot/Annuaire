@@ -30,6 +30,7 @@ public slots:
     void connexion();
     void nouvelUtilisateur();
     void miseAJourModel();
+    void recherche(QString);
 
 
 
