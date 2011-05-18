@@ -19,6 +19,7 @@ FenPrincipale::FenPrincipale(QWidget *parent) :
     connect(ui->actionConnexion,SIGNAL(triggered()),this, SLOT(connexion()));
     connect(ui->actionNouvel_utilisateur,SIGNAL(triggered()),this,SLOT(nouvelUtilisateur()));
 
+
     connect(ui->leRecherche,SIGNAL(textChanged(QString)),this,SLOT(recherche(QString)));
 
     db = new QSqlDatabase(QSqlDatabase::addDatabase("QMYSQL"));
@@ -55,7 +56,6 @@ void FenPrincipale::showAPropos()
 
 void FenPrincipale::connexion()
 {
-
     LoginDialog dialog;
     dialog.setWindowFlags(Qt::FramelessWindowHint);
     dialog.move(pos().x()+(width()-dialog.width())/2,pos().y()+(height()-dialog.height())/2);

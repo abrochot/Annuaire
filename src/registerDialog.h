@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QLineEdit>
+#include "PasswordHardness.h"
 namespace Ui {
     class registerDialog;
 }

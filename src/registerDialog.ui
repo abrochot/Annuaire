@@ -7,20 +7,8 @@
     <x>0</x>
     <y>0</y>
     <width>352</width>
-    <height>518</height>
+    <height>621</height>
    </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>352</width>
-    <height>518</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>352</width>
-    <height>518</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>Création d'un compte utilisateur</string>
@@ -30,8 +18,7 @@
     <normaloff>:/img/icon</normaloff>:/img/icon</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-</string>
+   <string notr="true"/>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -72,6 +59,13 @@ p, li { white-space: pre-wrap; }
      <item row="1" column="1">
       <widget class="QLineEdit" name="leLogin"/>
      </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="label_20">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="0">
       <widget class="QLabel" name="label_2">
        <property name="text">
@@ -83,6 +77,13 @@ p, li { white-space: pre-wrap; }
       <widget class="QLineEdit" name="lePassword">
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="label_21">
+       <property name="text">
+        <string>*</string>
        </property>
       </widget>
      </item>
@@ -100,7 +101,14 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
+     <item row="3" column="2">
+      <widget class="QLabel" name="label_22">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
       <widget class="QLabel" name="label_16">
        <property name="text">
         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -111,35 +119,78 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="5" column="0">
+     <item row="7" column="0">
       <widget class="QLabel" name="label_3">
        <property name="text">
         <string>Nom</string>
        </property>
       </widget>
      </item>
-     <item row="6" column="0">
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="leNom"/>
+     </item>
+     <item row="7" column="2">
+      <widget class="QLabel" name="label_23">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
       <widget class="QLabel" name="label_4">
        <property name="text">
         <string>Prénom</string>
        </property>
       </widget>
      </item>
-     <item row="8" column="0">
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="lePrenom"/>
+     </item>
+     <item row="8" column="2">
+      <widget class="QLabel" name="label_24">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="label_31">
+       <property name="text">
+        <string>Numéro de téléphone</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="leNumTel"/>
+     </item>
+     <item row="10" column="0">
       <widget class="QLabel" name="label_5">
        <property name="text">
         <string>mail1 </string>
        </property>
       </widget>
      </item>
-     <item row="9" column="0">
+     <item row="10" column="1">
+      <widget class="QLineEdit" name="leMail1"/>
+     </item>
+     <item row="10" column="2">
+      <widget class="QLabel" name="label_25">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
       <widget class="QLabel" name="label_6">
        <property name="text">
         <string>mail2</string>
        </property>
       </widget>
      </item>
-     <item row="10" column="0">
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="leMail2"/>
+     </item>
+     <item row="12" column="0">
       <widget class="QLabel" name="label_19">
        <property name="text">
         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -150,151 +201,14 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="11" column="0">
+     <item row="13" column="0">
       <widget class="QLabel" name="label_7">
        <property name="text">
         <string>Cursus</string>
        </property>
       </widget>
      </item>
-     <item row="12" column="0">
-      <widget class="QLabel" name="label_8">
-       <property name="text">
-        <string>Année du diplôme INSA</string>
-       </property>
-      </widget>
-     </item>
-     <item row="13" column="0">
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string>Année du diplôme ARCHI</string>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="0">
-      <widget class="QLabel" name="label_10">
-       <property name="text">
-        <string>Type (???)</string>
-       </property>
-      </widget>
-     </item>
-     <item row="15" column="0">
-      <widget class="QLabel" name="label_11">
-       <property name="text">
-        <string>Ecole d'Architecture</string>
-       </property>
-      </widget>
-     </item>
-     <item row="16" column="0">
-      <widget class="QLabel" name="label_17">
-       <property name="text">
-        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Informations &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Professionnelles :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="17" column="0">
-      <widget class="QLabel" name="label_12">
-       <property name="text">
-        <string>Entreprise actuelle</string>
-       </property>
-      </widget>
-     </item>
-     <item row="18" column="0">
-      <widget class="QLabel" name="label_13">
-       <property name="text">
-        <string>Pays</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QLabel" name="label_20">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QLabel" name="label_21">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="QLabel" name="label_22">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="2">
-      <widget class="QLabel" name="label_23">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="2">
-      <widget class="QLabel" name="label_24">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="2">
-      <widget class="QLabel" name="label_25">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="2">
-      <widget class="QLabel" name="label_26">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="2">
-      <widget class="QLabel" name="label_27">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="13" column="2">
-      <widget class="QLabel" name="label_28">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="2">
-      <widget class="QLabel" name="label_29">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="15" column="2">
-      <widget class="QLabel" name="label_30">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QLabel" name="label_31">
-       <property name="text">
-        <string>Numéro de téléphone</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="1">
+     <item row="13" column="1">
       <widget class="QComboBox" name="cbCursus">
        <item>
         <property name="text">
@@ -308,34 +222,72 @@ p, li { white-space: pre-wrap; }
        </item>
       </widget>
      </item>
-     <item row="6" column="1">
-      <widget class="QLineEdit" name="lePrenom"/>
+     <item row="13" column="2">
+      <widget class="QLabel" name="label_26">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
      </item>
-     <item row="5" column="1">
-      <widget class="QLineEdit" name="leNom"/>
-     </item>
-     <item row="7" column="1">
-      <widget class="QLineEdit" name="leNumTel"/>
-     </item>
-     <item row="8" column="1">
-      <widget class="QLineEdit" name="leMail1"/>
-     </item>
-     <item row="9" column="1">
-      <widget class="QLineEdit" name="leMail2"/>
-     </item>
-     <item row="12" column="1">
-      <widget class="QLineEdit" name="leAnneeDiplomeINSA"/>
-     </item>
-     <item row="13" column="1">
-      <widget class="QLineEdit" name="leAnneeDiplomeARCHI"/>
+     <item row="14" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Année du diplôme INSA</string>
+       </property>
+      </widget>
      </item>
      <item row="14" column="1">
-      <widget class="QLineEdit" name="leType"/>
+      <widget class="QLineEdit" name="leAnneeDiplomeINSA"/>
      </item>
-     <item row="18" column="1">
-      <widget class="QLineEdit" name="lePays"/>
+     <item row="14" column="2">
+      <widget class="QLabel" name="label_27">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Année du diplôme ARCHI</string>
+       </property>
+      </widget>
      </item>
      <item row="15" column="1">
+      <widget class="QLineEdit" name="leAnneeDiplomeARCHI"/>
+     </item>
+     <item row="15" column="2">
+      <widget class="QLabel" name="label_28">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="0">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Type (???)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="1">
+      <widget class="QLineEdit" name="leType"/>
+     </item>
+     <item row="16" column="2">
+      <widget class="QLabel" name="label_29">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="0">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>Ecole d'Architecture</string>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="1">
       <widget class="QComboBox" name="cbEcole">
        <property name="editable">
         <bool>true</bool>
@@ -345,10 +297,61 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="17" column="1">
+     <item row="17" column="2">
+      <widget class="QLabel" name="label_30">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item row="18" column="0">
+      <widget class="QLabel" name="label_17">
+       <property name="text">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Informations &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Professionnelles :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="0">
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>Entreprise actuelle</string>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="1">
       <widget class="QComboBox" name="cbEntreprise">
        <property name="editable">
         <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="20" column="0">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>Pays</string>
+       </property>
+      </widget>
+     </item>
+     <item row="20" column="1">
+      <widget class="QLineEdit" name="lePays"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="PasswordHardness" name="passwordHardnessMeter" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>139</width>
+         <height>28</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>139</width>
+         <height>28</height>
+        </size>
        </property>
       </widget>
      </item>
@@ -366,6 +369,14 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PasswordHardness</class>
+   <extends>QWidget</extends>
+   <header>PasswordHardness.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>leLogin</tabstop>
   <tabstop>lePassword</tabstop>

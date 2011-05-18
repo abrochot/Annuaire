@@ -15,18 +15,21 @@ SOURCES += main.cpp\
     LoginDialog.cpp \
     aPropos.cpp \
     registerDialog.cpp \
-    MySqlQueryModel.cpp
+    MySqlQueryModel.cpp \
+    PasswordHardness.cpp
 
 HEADERS  += FenPrincipale.h \
     LoginDialog.h \
     aPropos.h \
     registerDialog.h \
-    MySqlQueryModel.h
+    MySqlQueryModel.h \
+    PasswordHardness.h
 
 FORMS    += FenPrincipale.ui \
     LoginDialog.ui \
     aPropos.ui \
-    registerDialog.ui
+    registerDialog.ui \
+    PasswordHardness.ui
 
 RESOURCES += \
     img.qrc

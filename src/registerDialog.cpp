@@ -22,6 +22,7 @@ registerDialog::registerDialog(QStringList listeEcole, QStringList listeEntrepri
 
     connect(ui->buttonBox,SIGNAL(accepted()),this,SLOT(OkClicked()));
 
+    connect(ui->lePassword,SIGNAL(textChanged(QString)),ui->passwordHardnessMeter,SLOT(newPasswordEntered(QString)));
 
     champsRequis << ui->leLogin;
     champsRequis << ui->lePassword;
